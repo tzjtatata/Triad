@@ -50,4 +50,4 @@ If you find Triad useful for your research and applications, please cite using t
 ## Acknowledgement
 
 - [LLaVA-OneVision](https://github.com/LLaVA-VL/LLaVA-NeXT): the codebase we built upon. Thanks for their clear code base for reproduce, finetune and DPO training!
-- [LLaVA-1.6](https://github.com/haotian-liu/LLaVA): we also employ Triad on LLaVA-1.6. Thanks for their code base and AnyRes module which is inspired us to build the proposed EG-RoI module for IAD domain!
+- [LLaVA-1.6](https://github.com/haotian-liu/LLaVA): we also employ Triad on LLaVA-1.6. Thanks for their code base and AnyRes module which inspires us to build the proposed EG-RoI module for IAD domain!
