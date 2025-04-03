@@ -1,6 +1,6 @@
 #  Triad: Empowering LMM-based Anomaly Detection with Vision Expert-guided Visual Tokenizer and Manufacturing Process.
 
-**Triad: Empowering LMM-based Anomaly Detection with Vision Expert-guided Visual Tokenizer and Manufacturing Process** [[Paper]()] [[HF](coming soon)] <br>
+**Triad: Empowering LMM-based Anomaly Detection with Vision Expert-guided Visual Tokenizer and Manufacturing Process** [[Paper](https://arxiv.org/abs/2503.13184)] [[HF](coming soon)] <br>
 Yuanze Li*, Shihao Yuan*, Haolin Wang, Qizhang Li, Ming Liu (csmliu@outlook.com), Chen Xu, Guangming Shi, Wangmeng Zuo
 
 
