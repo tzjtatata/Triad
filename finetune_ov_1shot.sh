@@ -13,7 +13,7 @@ get_model_path(){
     echo ./checkpoints/llava-siglip-so400m-onevision-qwen2-7b--${1}_1epoch_4x8x4_1e-5
 }
 
-exp_name=llava_ov_1shot_reproduce_si_12k_realiad_10k_v1_coco_4k_1shot_mvtec_loco_clgen_llava_onevision_qwen_ov_aft_fix_32768_randomroi_new_new_code_test
+exp_name=Triad_llava_ov_1shot
 model_path=`get_model_path ${exp_name}`
 log_name=llava_train_$(date "+%Y%m%d_%H%M%S").log
 echo Will save to $model_path

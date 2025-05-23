@@ -6,9 +6,10 @@ Yuanze Li*, Shihao Yuan*, Haolin Wang, Qizhang Li, Ming Liu (csmliu@outlook.com)
 
 
 ## TODO
-- [ ] upload Triad codes (LLaVA-OneVision Version. ).
-- [ ] update Triad model pretrained weights.
+- [x] upload Triad codes (LLaVA-OneVision Version. ).
+- [x] update Triad model pretrained weights.
 - [ ] update human annotated instruction datasets for IAD: instructIAD.
+- [ ] update manufacaturing process CoT datasets for IAD: CoT-M.
 
 
 ## Contents
@@ -31,7 +32,7 @@ pip install flash-attn --no-build-isolation
 ```
 
 ## Triad Weights
-Triad Weights are coming soon. 
+Triad Weights are uploaded in [Baiduyun](https://pan.baidu.com/s/1-kRoUWz5Oe3hSdtRqo6-9Q?pwd=awhh)\[awhh\].
 
 ## Demo
 

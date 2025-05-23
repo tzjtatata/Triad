@@ -1,5 +1,5 @@
 """
-unified evaluate scripts for myriad2 and transformers models on IAD benchmarks
+unified evaluate scripts for triad and transformers models on IAD benchmarks
 """
 import sys
 sys.path.append("./LLaVA-NeXT/")
@@ -158,7 +158,7 @@ if __name__ == "__main__":
     parser.add_argument("--model-path", type=str, required=True)
     parser.add_argument("--model-base", type=str, default=None)
     parser.add_argument("--model-name", type=str)
-    parser.add_argument("--model-type", type=str, default='myriad2', choices=['myriad2', 'transformers', 'sglang'])
+    parser.add_argument("--model-type", type=str, default='triad', choices=['triad', 'transformers', 'sglang'])
     parser.add_argument("--use-flash-attn", action="store_true")
     # dataset config
     parser.add_argument("--ds", type=str, required=True)
@@ -215,7 +215,7 @@ if __name__ == "__main__":
     
     # load model
     worker=None
-    if args.model_type=="myriad2":
+    if args.model_type=="triad":
         worker=SimpleModelWrapper(
             args.model_path, 
             args.model_base, 

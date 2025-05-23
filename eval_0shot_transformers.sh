@@ -15,7 +15,7 @@ fi
 
 echo $exp_name
 
-#bash eval_myriad2_v_gpu_dataset_expert_prod.sh $model_path $exp_name $v $gpu $dataset $expert $prod
+#bash eval_triad_v_gpu_dataset_expert_prod.sh $model_path $exp_name $v $gpu $dataset $expert $prod
 echo Y | bash scripts/eval_transformers_0shot_v_gpu_dataset_expert_prod.sh $model_path $exp_name v0 0 mvtec _musc all
 echo Y | bash scripts/eval_transformers_0shot_v_gpu_dataset_expert_prod.sh $model_path $exp_name v1 0 mvtec _musc all
 echo Y | bash scripts/eval_transformers_0shot_v_gpu_dataset_expert_prod.sh $model_path $exp_name v2 0 mvtec _musc all
