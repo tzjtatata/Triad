@@ -6,8 +6,9 @@ Yuanze Li*, Shihao Yuan*, Haolin Wang, Qizhang Li, Ming Liu (csmliu@outlook.com)
 
 
 ## TODO
-- [x] upload Triad codes (LLaVA-OneVision Version. ).
+- [x] upload Triad codes (LLaVA-OneVision Version).
 - [x] update Triad model pretrained weights.
+- [x] update evaluation data.
 - [ ] update human annotated instruction datasets for IAD: instructIAD.
 - [ ] update manufacaturing process CoT datasets for IAD: CoT-M.
 
@@ -22,7 +23,7 @@ Yuanze Li*, Shihao Yuan*, Haolin Wang, Qizhang Li, Ming Liu (csmliu@outlook.com)
 Create a python 3.10 environment and install dependencies in `requirements.txt` using following commands.
 
 ```
-conda create -n myriad2_ov python==3.10
+conda create -n triad_ov python==3.10
 pip install -r requirements.txt
 ```
 
@@ -32,7 +33,7 @@ pip install flash-attn --no-build-isolation
 ```
 
 ## Triad Weights
-Triad Weights are uploaded in [Baiduyun](https://pan.baidu.com/s/1-kRoUWz5Oe3hSdtRqo6-9Q?pwd=awhh)\[awhh\].
+Triad Weights are uploaded in [Baiduyun](https://pan.baidu.com/s/1-kRoUWz5Oe3hSdtRqo6-9Q?pwd=awhh)[awhh].
 
 ## Demo
 
@@ -46,9 +47,11 @@ TODO.
 
 ### Requirement
 
-Required Sigclip pretrained model to build the vision tower. Download the weights to google/siglip-so400m-patch14-384.
+Required Siglip pretrained model to build the vision tower. Download the weights to google/siglip-so400m-patch14-384.
 
-Required Myriad2 pretrained model. 
+Required Triad pretrained model in [Triad Weights](#Triad-Weights).
+
+Required evaluation data from [Baiduyun](https://pan.baidu.com/s/1tzSGiH9xnjTIrxfv8c4RVQ?pwd=y8m2)[y8m2].
 
 ### Usage
 
@@ -72,7 +75,7 @@ bash eval_1shot_path.sh ./checkpoints/YOUR_CHEKCPOINTS_PATH
 
 If you find Triad useful for your research and applications, please cite using this BibTeX:
 ```bibtex
-@article{Myriad2,
+@article{Triad,
   title={Triad: Empowering LMM-based Anomaly Detection with Vision Expert-guided Visual Tokenizer and Manufacturing Process},
   author={Li, Yuanze and Yuan, Shihao and Wang, Haolin and Li, Qizhang and Liu, Ming and Xu, Chen and Shi, Guangming and Zuo, Wangmeng},
   journal={},
