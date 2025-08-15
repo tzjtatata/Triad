@@ -1,6 +1,6 @@
 #  Triad: Empowering LMM-based Anomaly Detection with Vision Expert-guided Visual Tokenizer and Manufacturing Process.
 
-**Triad: Empowering LMM-based Anomaly Detection with Vision Expert-guided Visual Tokenizer and Manufacturing Process** [[Paper](https://arxiv.org/abs/2503.13184)] [[HF](coming soon)] <br>
+**Triad: Empowering LMM-based Anomaly Detection with Vision Expert-guided Visual Tokenizer and Manufacturing Process** [[Paper](https://arxiv.org/abs/2503.13184)] [[HF](https://huggingface.co/collections/CSshihao/triad-689c96b81c1a34fabd246c40)] <br>
 Yuanze Li*, Shihao Yuan*, Haolin Wang, Qizhang Li, Ming Liu (csmliu@outlook.com), Chen Xu, Guangming Shi, Wangmeng Zuo
 
 
@@ -9,13 +9,14 @@ Yuanze Li*, Shihao Yuan*, Haolin Wang, Qizhang Li, Ming Liu (csmliu@outlook.com)
 - [x] upload Triad codes (LLaVA-OneVision Version).
 - [x] update Triad model pretrained weights.
 - [x] update evaluation data.
-- [ ] update human annotated instruction datasets for IAD: instructIAD.
-- [ ] update manufacaturing process CoT datasets for IAD: CoT-M.
+- [x] update human annotated instruction datasets for IAD: instructIAD.
+- [x] update manufacaturing process CoT datasets for IAD: CoT-M.
+- [ ] update demo.
 
 
 ## Contents
 - [Install](#install)
-- [Triad Weights](#Triad-Weights)
+- [Triad Weights](#triad-weights)
 - [Train](#train)
 - [Evaluation](#evaluation)
 
@@ -33,7 +34,7 @@ pip install flash-attn --no-build-isolation
 ```
 
 ## Triad Weights
-Triad Weights are uploaded in [Baiduyun](https://pan.baidu.com/s/1-kRoUWz5Oe3hSdtRqo6-9Q?pwd=awhh)[awhh].
+Triad Weights are uploaded in [Baiduyun](https://pan.baidu.com/s/1-kRoUWz5Oe3hSdtRqo6-9Q?pwd=awhh)[awhh] and [huggingface](https://huggingface.co/collections/CSshihao/triad-689c96b81c1a34fabd246c40).
 
 ## Demo
 
@@ -41,17 +42,35 @@ The demo code is coming soon.
 
 ## Train
 
-TODO. 
+Required Siglip pretrained model to build the vision tower. Download the weights from [google/siglip-so400m-patch14-384](https://huggingface.co/google/siglip-so400m-patch14-384).
+
+Download pretrained models from [lmms-lab/llava-onevision-qwen2-7b-ov](https://huggingface.co/lmms-lab/llava-onevision-qwen2-7b-ov), or Triad [pretrained models](https://huggingface.co/CSshihao/Triad_ov) if you want further training.
+
+Download [training data](https://huggingface.co/datasets/CSshihao/Triad_train_data) and merge the images directory.
+
+Change the `data_path` and `image_root` in training scripts to your data directory. The `image_root` should be the deepest directory that not in the "image" key in data jsons. The final image_path would be `image_root + image_path_in_data`.
+
+Change the base model path in training scripts.
+
+run
+```
+bash finetune_ov_0shot.sh
+```
+or
+```
+bash finetune_ov_1shot.sh
+```
+
 
 ## Evaluation
 
 ### Requirement
 
-Required Siglip pretrained model to build the vision tower. Download the weights to google/siglip-so400m-patch14-384.
+Required Siglip pretrained model to build the vision tower. Download the weights from [google/siglip-so400m-patch14-384](https://huggingface.co/google/siglip-so400m-patch14-384).
 
-Required Triad pretrained model in [Triad Weights](#Triad-Weights).
+Required Triad pretrained model in [Triad Weights](#triad-weights>).
 
-Required evaluation data from [Baiduyun](https://pan.baidu.com/s/1tzSGiH9xnjTIrxfv8c4RVQ?pwd=y8m2)[y8m2].
+Required evaluation data from [Baiduyun](https://pan.baidu.com/s/1tzSGiH9xnjTIrxfv8c4RVQ?pwd=y8m2)[y8m2] or [Huggingface](https://huggingface.co/datasets/CSshihao/Traid_eval_data).
 
 ### Usage
 
